@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Para rodar o Linter (RuboCop) com as correções automáticas, basta executar no terminal:
+```
+rubocop -a
+```
