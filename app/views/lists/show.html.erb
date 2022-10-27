@@ -1,14 +1,6 @@
 <h1><%= @list.title %></h1>
-<p>
-    <%= link_to "Edit List Name", edit_list_path(@list) %> 
-    |
-    <%= link_to "Delete List", list_path(@list), data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-    } %>
-    |
-    <%= link_to "Return", lists_path %>
-</p>
+
+<%= render "lists/options" %>
 
 <h2>Tasks</h2>
 <%= render @list.tasks %>

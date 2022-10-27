@@ -2,9 +2,19 @@
 <div>
     <% status = if task.checked; then "[X]" else "[ ]" end %>
     <p><%= status %> <%= task.title %></p>
-    <p><%= link_to "Delete", [task.list, task], data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-    } %></p>
+    <div>
+        <% status = if task.checked? then "Uncheck" else "Check" end%>
+        <%= link_to status, 
+            [task.list, task, task: { checked: !task.checked? }],
+            data: { turbo_method: :patch } 
+        %> 
+        |
+        <%= link_to "Edit", edit_list_task_path(task.list, task) %>
+        |
+        <%= link_to "Delete", [task.list, task], data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+        } %>
+    </div>
 </div>
 <% end %>
