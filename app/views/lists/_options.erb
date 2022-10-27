@@ -1,0 +1,11 @@
+<p>
+    <%= link_to "Edit List Name", edit_list_path(@list) %> 
+    |
+    <%= link_to "Delete List", list_path(@list), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+    |
+    <%= link_to "See All Lists", lists_path %>
+</p>
+
