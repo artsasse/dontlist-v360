@@ -1,0 +1,10 @@
+<% unless task.created_at.nil? %>
+<div>
+    <% status = if task.checked; then "[X]" else "[ ]" end %>
+    <p><%= status %> <%= task.title %></p>
+    <p><%= link_to "Delete", [task.list, task], data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %></p>
+</div>
+<% end %>

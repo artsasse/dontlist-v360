@@ -5,6 +5,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    # Para mostrar os erros de validação do model Task
+    @task = @list.tasks.build
   end
 
   def new
