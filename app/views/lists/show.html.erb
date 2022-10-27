@@ -2,8 +2,8 @@
 
 <%= render "lists/options" %>
 
-<h2>Tasks</h2>
-<%= render @list.tasks %>
-
+<section>
 <%= render "tasks/form", list: @list, task: @task %>
 
+<%= render @list.tasks.reverse %>
+</section>
