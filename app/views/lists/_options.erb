@@ -3,7 +3,7 @@
     |
     <%= link_to "Delete List", list_path(@list), data: {
         turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
+        turbo_confirm: "Are you sure? You will lose all tasks."
     } %>
     |
     <%= link_to "See All Lists", lists_path %>
