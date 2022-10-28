@@ -31,11 +31,22 @@
 .list-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .list-options {
   flex-basis: 30%;
   text-align: right;
+}
+
+@media (max-width: 500px) {
+  .list-header {
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .list-options {
+    text-align: center;
+  }
 }
 
