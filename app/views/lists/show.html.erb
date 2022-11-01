@@ -9,7 +9,6 @@
     <%= render @list.tasks.reverse %>
 </section>
 
-<%= button_to "Delete List", list_path(@list), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure? You will lose all tasks."
-}, class: "delete-list" %>
+<%= button_to "Delete List", list_path(@list), method: :delete, 
+    form: {data: {turbo_confirm: "Are you sure? You will lose all tasks."}}, 
+    class: "delete-list" %>
