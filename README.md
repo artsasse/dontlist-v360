@@ -1,35 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Lista de tarefas desenvolvida como desafio técnico do processo seletivo da V360.
 
-Things you may want to cover:
+## Ruby
 
 * Versão do Ruby em que este projeto foi desenvolvido: 3.1.2
 
 * Dependências do projeto estão no Gemfile e Gemfile.lock. 
-  Basta executar ```bundle install``` no terminal para instalá-las.
 
-* Configuration
+## Configuração
 
-* Database creation
+* Para configurar o ambiente de uma vez só, basta executar:
+```
+bin/setup
+```
 
-* Database initialization
+* Para semear o banco de dados com dados artificiais, execute:
+```
+bin/rail db:seed
+```
 
-* How to run the test suite
+## Testes
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-## Links
-
-* Drive com documentos de apoio do projeto:
-https://drive.google.com/file/d/1m8RW5aJsUJxJgY78UWddyAJKPhQLE0wx/view?usp=share_link
-
-* Link do app no Heroku: https://arcane-peak-05014.herokuapp.com/
+* Para rodar os testes de sistema, basta executar:
+```
+bin/rails test:system
+```
 
 ## Linter
 
@@ -37,6 +33,13 @@ https://drive.google.com/file/d/1m8RW5aJsUJxJgY78UWddyAJKPhQLE0wx/view?usp=share
 ```
 rubocop -a
 ```
+
+## Links
+
+* Drive com documentos de apoio do projeto:
+https://drive.google.com/file/d/1m8RW5aJsUJxJgY78UWddyAJKPhQLE0wx/view?usp=share_link
+
+* Link do app no Heroku: https://arcane-peak-05014.herokuapp.com/
 
 ## Heroku
 
